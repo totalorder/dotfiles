@@ -1,0 +1,6 @@
+if [ ! "$(git rev-parse --abbrev-ref HEAD)" = "master" ]; then
+  echo "error: current branch is not master"
+  exit 1
+fi
+
+git pull origin master

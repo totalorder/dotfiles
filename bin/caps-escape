@@ -1,0 +1,11 @@
+#!/bin/sh
+setxkbmap se
+sleep 1
+#setxkbmap us
+
+setxkbmap -option grp:switch,grp:shifts_toggle,grp_led:scroll us,se
+
+xmodmap -e "clear lock"
+xmodmap -e "keycode 0x42 = Escape"
+#xmodmap -e "keycode 26 = e E eacute Eacute EuroSign cent EuroSign"
+#xmodmap -e "keycode 28 = t T trademark trademark trademark trademark"

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#xrandr --dpi 100 --output eDP-1 --auto --pos 1792x1440 --output DVI-I-2-2 --auto --pos 0x0 --output DVI-I-1-1 --auto --pos 2560x0
+xrandr --dpi 100 --output eDP-1 --off --pos 1792x1440 --output HDMI-1 --auto --pos 0x0 --output DP-2 --auto --pos 2560x0
+#xrandr --dpi 100 --output eDP-1 --off --output DVI-I-2-2 --auto --pos 0x0 --output DVI-I-1-1 --auto --pos 2560x0
+
