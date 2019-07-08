@@ -1,6 +1,6 @@
 
 sudo apt-get update
-sudo apt-get install i3 python curl git zsh
+sudo apt-get install i3 python curl git zsh xautolock policykit-1-gnome pavucontrol pasystray
 
 # set zsh as default, then relogin 
 chsh -s /usr/bin/zsh

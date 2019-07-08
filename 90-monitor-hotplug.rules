@@ -1,0 +1,3 @@
+# /etc/udev/rules.d/90-monitor-hotplug.rules
+KERNEL=="card0", SUBSYSTEM=="drm", ACTION=="change", RUN+="/home/totalorder/bin/hotplug.sh"
+

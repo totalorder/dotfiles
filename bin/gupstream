@@ -3,4 +3,4 @@ if [ ! "$(git rev-parse --abbrev-ref HEAD)" = "master" ]; then
   exit 1
 fi
 
-git pull origin master
+git pull upstream master

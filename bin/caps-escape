@@ -1,9 +1,12 @@
 #!/bin/sh
 setxkbmap se
 sleep 1
-#setxkbmap us
+setxkbmap us
 
-setxkbmap -option grp:switch,grp:shifts_toggle,grp_led:scroll us,se
+#setxkbmap -option grp:switch,grp:shifts_toggle,grp_led:scroll us,se
+# grp:switch,grp_led:scroll,grp:switch,grp:shifts_toggle,grp_led:scroll
+setxkbmap -option
+setxkbmap -option grp:switch,grp:menu_toggle us,se
 
 xmodmap -e "clear lock"
 xmodmap -e "keycode 0x42 = Escape"
