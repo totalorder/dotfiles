@@ -195,6 +195,7 @@ bindsym $mod+Next exec --no-startup-id singlemon # PageDown -> internal monitor
 assign [class="Google-chrome"] 3
 assign [class="jetbrains-idea"] 2
 
+exec gnome-keyring-daemon --start
 exec vmware-user-suid-wrapper --no-startup-id
 exec nm-applet
 exec (sleep 1 && caps-escape) &
