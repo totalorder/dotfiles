@@ -1,6 +1,6 @@
 
 sudo apt-get update
-sudo apt-get install i3 python curl git zsh xautolock policykit-1-gnome pavucontrol pasystray
+sudo apt-get install i3 python vim curl git zsh htop xautolock 
 
 # set zsh as default, then relogin 
 chsh -s /usr/bin/zsh
@@ -11,3 +11,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # zsh-autocomplete 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+# fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install

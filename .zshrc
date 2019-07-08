@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export JAVA_HOME="/usr/lib/jvm/jdk-11.0.3/"
-export PATH=$HOME/bin:$HOME/.local/bin:$PATH:$JAVA_HOME/bin
+export PATH=$HOME/bin:$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/totalorder/.oh-my-zsh"
@@ -33,6 +32,9 @@ CASE_SENSITIVE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -70,7 +72,6 @@ CASE_SENSITIVE="true"
 plugins=(
   git
   zsh-autosuggestions
-  #history-substring-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -100,14 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-#
-#autoload history-substring-search-menu
-autoload -Uz history-beginning-search-menu
-zle -N history-beginning-search-menu
-bindkey '^X^X' history-beginning-search-menu 
-#bindkey '^[[B' history-substring-search-down
-#bindkey "^[[5~" history-beginning-search-backward
-#bindkey "^[[6~" history-beginning-search-forward
 
-source ~/.zshrc.local
+if [[ -f "$HOME/.zshrc.local" ]]; then
+    source $HOME/.zshrc.local
+fi

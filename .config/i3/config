@@ -184,29 +184,27 @@ for_window [title="CSSH.*"] floating enable
 
 bindsym $mod+Prior exec --no-startup-id multimon # PageUp -> external monitors 
 bindsym $mod+Next exec --no-startup-id singlemon # PageDown -> internal monitor
-workspace 1 output HDMI-2
-workspace 2 output DP-1-2 
-workspace 3 output DP-1-2 
-workspace 4 output DP-1-2 
-workspace 5 output DP-1-2 
-workspace 9 output DP-1-2 
+
+#workspace 1 output HDMI-2
+#workspace 2 output DP-1-2
+#workspace 3 output DP-1-2
+#workspace 4 output DP-1-2
+#workspace 5 output DP-1-2
+#workspace 9 output DP-1-2
+
 assign [class="Google-chrome"] 3
 assign [class="jetbrains-idea"] 2
 
-#exec vmware-user-suid-wrapper --no-startup-id
-
-#exec /usr/bin/gnome-settings-daemon
-exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+exec vmware-user-suid-wrapper --no-startup-id
 exec nm-applet
-#exec monitorsetup
 exec (sleep 1 && caps-escape) &
-exec xautolock -time 2 -locker 'ilock' &
+
+#exec monitorsetup
+#exec xautolock -time 2 -locker 'ilock' &
 #exec xrandr --output eDP1 --auto
 #exec xrandr --output DP1 --above eDP1
-exec gsettings set org.gnome.desktop.lockdown disable-lock-screen true
-#exec renice 19 -p $(pgrep DisplayLinkMana)
-exec gnome-keyring-daemon
-exec /usr/bin/pasystray
+#exec gsettings set org.gnome.desktop.lockdown disable-lock-screen true
+
 exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal'
-exec /usr/bin/google-chrome
-exec idea
+exec --no-startup-id i3-msg 'workspace 2; exec idea'
+exec --no-startup-id i3-msg 'workspace 3; exec google-chrome'
