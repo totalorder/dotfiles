@@ -17,3 +17,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 # pyenv
 # install pyenv somehow
+
+# direnv
+curl -sfL https://direnv.net/install.sh | bash
+echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc

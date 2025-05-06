@@ -1,0 +1,4 @@
+#hide_env_diff = true
+#log_filter = "\\sloading|\\sunloading"
+log_filter = "thisfilterwillmatchnothing"
+#log_format=""

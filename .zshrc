@@ -74,7 +74,6 @@ CASE_SENSITIVE="true"
 plugins=(
   git
   zsh-autosuggestions
-  direnv
 )
 
 source $ZSH/oh-my-zsh.sh
