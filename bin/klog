@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+POD="$(kpod)"
+CONTAINER="$(kubectl get pod "${POD}" -o jsonpath='{.spec.containers[*].name}' | sed 's/\ /\n/' | grep -v "ffwd-java-shim")"
+#echo "${CONTAINER[*]}"
+#echo "$CONTAINER"
+kubectl logs "${POD}" "${CONTAINER}" "$@" | grep '^{' | jq -rj '.time, " ", .message, "\n", .stack_trace | select(. == null | not)'
+
+#__process_line() {
+#  if [[ "$1" =~ ^\{.* ]]; then
+#    echo "$1" | jq -rj '.time, " ", .message, "\n", .stack_trace | select(. == null | not)'
+#  else
+#    echo "$1"
+#  fi
+#}
+
+#export -f __process_line
+#cat ~/tmp/asd.txt | xargs -d '\n' -I {} -n 1 bash -c '__process_line "$@"' _ {}
+
+#cat ~/tmp/asd.txt | head -n 100 | grep '^{' | jq -rj '.time, " ", .message, "\n", .stack_trace | select(. == null | not)'

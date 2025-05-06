@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+grep "nameserver 10." /run/systemd/resolve/resolv.conf && sed -i 's/^nameserver 192.168.0.1$/#nameserver 192.168.0.1/g' /run/systemd/resolve/resolv.conf

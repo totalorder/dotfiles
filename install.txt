@@ -1,6 +1,6 @@
 
 sudo apt-get update
-sudo apt-get install i3 python vim curl git zsh htop xautolock 
+sudo apt-get install i3 python vim curl git zsh htop xautolock direnv
 
 # set zsh as default, then relogin 
 chsh -s /usr/bin/zsh
@@ -14,3 +14,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+
+# pyenv
+# install pyenv somehow

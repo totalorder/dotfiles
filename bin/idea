@@ -7,6 +7,7 @@
 # this fixes signals processing for idea
 # see https://youtrack.jetbrains.com/issue/IDEA-157989
 # signal-reset implemented by Thomas Lee https://github.com/thomaslee/signal-reset
+if [ ! -f "signal-reset" ]; then
 echo '#include <stdio.h>
 #include <string.h>
 #include <unistd.h>
@@ -51,7 +52,8 @@ main (int argc, char **argv)
 }
 ' > signal-reset.c
 
-gcc -o signal-reset signal-reset.c
+gcc -o .signal-reset signal-reset.c
 rm signal-reset.c
-./signal-reset /home/totalorder/programs/idea-IU-182.3911.36/bin/idea.sh & disown 
+fi
+./.signal-reset /home/ablomberg/programs/idea-IU-212.5284.40/bin/idea & disown 
 

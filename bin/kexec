@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+POD="$(kpod)"
+kubectl exec -it "${POD}" -- bash "$@"

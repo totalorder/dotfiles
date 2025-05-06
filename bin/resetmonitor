@@ -2,6 +2,6 @@
 #xrandr --dpi 100 --output eDP-1 --auto --pos 1792x1440 --output DVI-I-2-2 --auto --pos 0x0 --output DVI-I-1-1 --auto --pos 2560x0
 #xrandr --dpi 100 --output eDP-1 --off --pos 1792x1440 --output HDMI-1 --auto --pos 0x0 --output DP-2 --auto --pos 2560x0
 #xrandr --dpi 100 --output eDP-1 --off --output DVI-I-2-2 --auto --pos 0x0 --output DVI-I-1-1 --auto --pos 2560x0
-#xrandr --output eDP-1 --mode 1920x1200 --pos 0x400 --output DP-1 --mode 2560x1600 --pos 1920x0
-xrandr --output eDP-1-1 --mode 3840x2400 --pos 0x0 --output DP-4 --primary --mode 3840x2160 --pos 3840x240
+#xrandr --output DP-4 --off && sleep 5 && monitorsetup
+xrandr --output eDP-1-1 --off && sleep 2 && monitorsetup
 
